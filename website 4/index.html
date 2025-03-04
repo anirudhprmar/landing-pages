@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Retro Arcade Game Menu</title>
+    <!-- We'll add CSS here later -->
+     <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Main container for our arcade menu -->
+    <div class="arcade-menu">
+        <!-- Menu header -->
+        <div class="menu-header">
+            Retro Arcade Games
+        </div>
+        
+        <!-- Game list container -->
+        <div class="game-list">
+            <!-- Each game is a separate div -->
+            <div class="game-item">Space Invaders</div>
+            <div class="game-item">Pac-Man</div>
+            <div class="game-item">Tetris</div>
+            <div class="game-item">Donkey Kong</div>
+        </div>
+    </div>
+
+    <script>
+          function selectGame(element) {
+            element.classList.add('select-effect');
+            setTimeout(() => {
+                element.classList.remove('select-effect');
+            }, 500);
+        }
+    </script>
+</body>
+</html>
