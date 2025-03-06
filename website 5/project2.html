@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Positions 2</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: rgb(46, 45, 43);
+            padding: 5px;
+            margin: 10px;
+            color: white;
+            font-size: 25px;
+        }
+
+        .nav-ul, .nav-ul2{
+            display: flex;
+            gap: 15px;
+            list-style:none;
+            color: white;
+            align-items: center;
+        }
+
+        .top-navigation{
+            display: flex;
+            justify-content: space-between;
+            background-color: hsl(0, 2%, 24%);
+            padding: 10px;
+            border-radius: 10px;
+            align-items: center;
+            position: fixed;
+            top:1.4vw;
+            width: 90%;
+            right: 3vw;
+            transition: 0.2s ease-in-out;
+            z-index: 10;
+        }
+
+        .top-navigation:hover{
+            transform: scale(1.05);
+        }
+
+        .nav-ul2 button{
+            padding: 12px;
+            border: none;
+            color: white;
+            background-color: rgb(138, 134, 134);
+            border-radius: 2px;
+            font-size: 25px;
+            border-radius: 10px;
+        }
+
+
+        
+        .sec-1{
+            margin: 2rem auto;
+            padding: 10px;
+            
+        }
+        
+        h1{
+            font-size: 3rem;
+            padding: 4px;
+        }
+
+        h2{
+            font-size: 2rem;
+            padding: 4px;
+        }
+        
+        p{
+            font-size: 1.12rem;
+        }
+        
+        .sec-1, .sec-2, .sec-3{
+            height: 100vh;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            position: sticky;
+        }
+        
+        .sec-1 img{
+            border: 2px solid white;
+            box-shadow: 8px 8px white;
+        }
+
+        .sec-2{
+            padding: 10px;
+        }
+
+        footer{
+            display: flex;
+            background-color: rgb(143, 140, 140);
+            padding: 10px;
+            color: black;
+            color:antiquewhite;
+            border-radius: 10px;
+        }
+
+        
+
+        @media screen and (min-width:460px) {
+            .sec-1 img{
+                width: 210px;
+            }
+
+            
+        }
+
+        @media screen and (min-width:670px) {
+            .sec-1 img{
+                width: 300px;
+            }
+        }
+
+        @media screen and (min-width:770px) {
+            .sec-1 img{
+                width: 400px;
+            }
+        }
+
+        @media screen and (min-width:1280px) {
+            .sec-1 img{
+                width: 500px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="top-navigation">
+
+            <div>
+                <ul class="nav-ul">
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+
+            <div>
+                <ul class="nav-ul2">
+                    <li>Login</li>
+                    <li><button>Sign up</button></li>
+                </ul>
+            </div>
+
+        </nav>
+
+    </header>
+
+    <main class="main-section">
+        <section class="sec-1">
+            <div>
+                <h1>Lorem ipsum dolor, sit amet consecte</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis, ducimus perspiciatis animi hic dolorem voluptatibus?</p>
+
+            </div>
+
+            <div>
+                <img src="https://images.unsplash.com/photo-1517960413843-0aee8e2b3285?q=80&w=2099&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="a man enjoyig himself in front of a sun at dusk" width="400">
+            </div>
+            
+        </section>
+
+        <section class="sec-2">
+            <div style="display: flex;
+             flex-direction: column; gap: 40px;">
+
+                <h2 >
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, velit.
+                </h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse alias maiores tenetur, laudantium totam similique nesciunt voluptates soluta molestiae, accusamus, veritatis rem voluptatem veniam iure. Aspernatur asperiores voluptatum aut quos ipsum delectus cupiditate magni officia.
+
+                </p>
+            </div>
+        </section>
+
+        <section class="sec-3" >
+            <div  style="display: flex;
+             flex-direction: column; gap: 40px;">
+
+                <h2>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, velit.
+                </h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse alias maiores tenetur, laudantium totam similique nesciunt voluptates soluta molestiae, accusamus, veritatis rem voluptatem veniam iure. Aspernatur asperiores voluptatum aut quos ipsum delectus cupiditate magni officia.
+
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div style="display: flex; flex-direction: column; ">
+            <p>Follow us:</p>
+            <ul style="list-style: none; display: flex; gap: 10px;">
+                <li>X</li>
+                <li>YT</li>
+                <li>Instagram</li>
+            </ul>
+        </div>
+
+        <div style="margin-left: 30px;">
+            <p>Contact us at: Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+    </footer>
+</body>
+</html>
